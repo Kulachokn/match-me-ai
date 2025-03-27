@@ -38,24 +38,6 @@ Job description:
       throw new Error(`Hugging Face API error: ${response.statusText}`);
     }
 
-    // const data = await response.json();
-    // console.log(data);
-    // return NextResponse.json({
-    //   response: data[0]?.generated_text || "No response",
-    // });
-
-    // const rawText = data[0]?.generated_text || "";
-
-    // const jsonMatch = rawText.match(/\{.*\}/s);
-
-    // if (!jsonMatch) {
-    //   throw new Error("No JSON found in response");
-    // }
-
-    // const parsedResponse = JSON.parse(jsonMatch[0]);
-
-    // return NextResponse.json(parsedResponse);
-
     const data = await response.json();
     const rawText = data[0]?.generated_text || "";
 
